@@ -1,0 +1,9 @@
+html {
+    background-color: #181818;
+    color: lightgray;
+}
+
+a:link {color: lightblue}
+a:visited {color: pink}
+a:hover {color: steelblue}
+a:active {color: hotpink}
