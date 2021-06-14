@@ -15,7 +15,7 @@
             width: 25em;
         }
 
-        form input {
+        form input[type=number] {
             float: right;
         }
     </style>
@@ -23,39 +23,39 @@
 <body>
 <form id="form">
     <p><label for="livableHeight">Livable Height</label>
-        <input type="number" id="livableHeight" name="livableHeight"></p>
+        <input type="number" id="livableHeight" name="livableHeight" class="general"></p>
 
     <p><label for="lowerFloorWidth">Lower Floor Width</label>
-        <input type="number" id="lowerFloorWidth" name="lowerFloorWidth"></p>
+        <input type="number" id="lowerFloorWidth" name="lowerFloorWidth" class="general"></p>
 
     <p><label for="lowerLivableWidth">Lower Livable Width</label>
-        <input type="number" id="lowerLivableWidth" name="lowerLivableWidth"></p>
+        <input type="number" id="lowerLivableWidth" name="lowerLivableWidth" class="general"></p>
 
     <p><label for="lowerFloorHeight">Lower Floor Height</label>
-        <input type="number" id="lowerFloorHeight" name="lowerFloorHeight"></p>
+        <input type="number" id="lowerFloorHeight" name="lowerFloorHeight" class="general"></p>
 
     <p><label for="upperFloorWidth">Upper Floor Width</label>
-        <input type="number" id="upperFloorWidth" name="upperFloorWidth"></p>
+        <input type="number" id="upperFloorWidth" name="upperFloorWidth" class="general"></p>
 
     <p><label for="upperLivableWidth">Upper Livable Width</label>
-        <input type="number" id="upperLivableWidth" name="upperLivableWidth"></p>
+        <input type="number" id="upperLivableWidth" name="upperLivableWidth" class="general"></p>
 
     <p><label for="upperFloorHeight">Upper Floor Height</label>
-        <input type="number" id="upperFloorHeight" name="upperFloorHeight"></p>
+        <input type="number" id="upperFloorHeight" name="upperFloorHeight" class="general"></p>
 
     <p><label for="floorLength">Floor Length</label>
-        <input type="number" id="floorLength" name="floorLength"></p>
+        <input type="number" id="floorLength" name="floorLength" class="general"></p>
 
     <h3 style="text-align: center">Advanced</h3>
 
     <p><label for="wallThickness">Wall Thickness</label>
-        <input type="number" id="wallThickness" name="wallThickness" value=".25"></p>
+        <input type="number" id="wallThickness" name="wallThickness" value=".25" required></p>
 
     <p><label for="betweenFloorHeight">Between Floor Height</label>
-        <input type="number" id="betweenFloorHeight" name="betweenFloorHeight" value=".25"></p>
+        <input type="number" id="betweenFloorHeight" name="betweenFloorHeight" value=".25" required></p>
 
     <p><label for="outerWallLength">Outer Wall Length</label>
-        <input type="number" id="outerWallLength" name="outerWallLength" value="24"></p>
+        <input type="number" id="outerWallLength" name="outerWallLength" value="24" required></p>
 
     <h3 style="text-align: center">Extra</h3>
 
@@ -94,6 +94,10 @@
 
     <p><label for="lowerCeilingWidth">Lower Ceiling Width</label>
         <input type="number" id="lowerCeilingWidth" name="lowerCeilingWidth" readonly></p>
+
+    <input type="submit" value="Calculate">
+    <input type="button" value="Clear Calculated" id="clearCalculated">
+    <input type="reset" value="Reset All">
 </form>
 <canvas id="canvas" width="200" height="100">Your browser does not support this visualization.</canvas>
 </body>

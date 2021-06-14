@@ -1,7 +1,8 @@
 import {canvas, context, colors, addResizeEventListener} from './common/canvas.js';
 
+const form = document.getElementById('form');
 addResizeEventListener(() => {
-    const formBounds = document.getElementById('form').getBoundingClientRect();
+    const formBounds = form.getBoundingClientRect();
     if (formBounds.width * 2 > window.innerWidth) {
         canvas.style.position = 'static';
         canvas.width = window.innerWidth - 17;
@@ -27,4 +28,18 @@ addResizeEventListener(() => {
 
 function pixelsToInt(str) {
     return parseInt(str.replace('px', ''));
+}
+
+let preCalculated = {};
+const generalInputs = document.getElementsByClassName('general');
+document.getElementById('clearCalculated').onclick = () => {
+    for (let i = 0; i < generalInputs.length; i++) {
+        document.getElementById(generalInputs[i].id).value = preCalculated[generalInputs[i].id];
+    }
+}
+form.addEventListener('submit', (event) => event.preventDefault());
+form.onsubmit = () => {
+    for (let i = 0; i < generalInputs.length; i++) {
+        preCalculated[generalInputs[i].id] = generalInputs[i].value;
+    }
 }
