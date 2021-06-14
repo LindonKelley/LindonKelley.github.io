@@ -3,6 +3,34 @@ html {
     color: lightgray;
 }
 
+input {
+    background-color: darkgray;
+    border: darkgray;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input:focus{
+    outline: 2px solid lightgray;
+}
+
+::-moz-selection {
+    color: #181818;
+    background: lightgray;
+}
+
+::selection {
+    color: #181818;
+    background: lightgray;
+}
+
 a:link {color: lightblue}
 a:visited {color: pink}
 a:hover {color: steelblue}

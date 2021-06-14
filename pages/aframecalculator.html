@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/dark.css"/>
+    <link rel="stylesheet" href="../styles/canvas.css">
+    <title>A-Frame Calculator - Lindon Kelley</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        form {
+            width: 25em;
+        }
+
+        form input {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<form id="form">
+    <p><label for="livableHeight">Livable Height</label>
+        <input type="number" id="livableHeight" name="livableHeight"></p>
+
+    <p><label for="lowerFloorWidth">Lower Floor Width</label>
+        <input type="number" id="lowerFloorWidth" name="lowerFloorWidth"></p>
+
+    <p><label for="lowerLivableWidth">Lower Livable Width</label>
+        <input type="number" id="lowerLivableWidth" name="lowerLivableWidth"></p>
+
+    <p><label for="lowerFloorHeight">Lower Floor Height</label>
+        <input type="number" id="lowerFloorHeight" name="lowerFloorHeight"></p>
+
+    <p><label for="upperFloorWidth">Upper Floor Width</label>
+        <input type="number" id="upperFloorWidth" name="upperFloorWidth"></p>
+
+    <p><label for="upperLivableWidth">Upper Livable Width</label>
+        <input type="number" id="upperLivableWidth" name="upperLivableWidth"></p>
+
+    <p><label for="upperFloorHeight">Upper Floor Height</label>
+        <input type="number" id="upperFloorHeight" name="upperFloorHeight"></p>
+
+    <p><label for="floorLength">Floor Length</label>
+        <input type="number" id="floorLength" name="floorLength"></p>
+
+    <h3 style="text-align: center">Advanced</h3>
+
+    <p><label for="wallThickness">Wall Thickness</label>
+        <input type="number" id="wallThickness" name="wallThickness" value=".25"></p>
+
+    <p><label for="betweenFloorHeight">Between Floor Height</label>
+        <input type="number" id="betweenFloorHeight" name="betweenFloorHeight" value=".25"></p>
+
+    <p><label for="outerWallLength">Outer Wall Length</label>
+        <input type="number" id="outerWallLength" name="outerWallLength" value="24"></p>
+
+    <h3 style="text-align: center">Extra</h3>
+
+    <p><label for="lowerSquareFootage">Lower Square Footage</label>
+        <input type="number" id="lowerSquareFootage" name="lowerSquareFootage" readonly></p>
+
+    <p><label for="lowerSquareFootageLivable">Lower Square Footage Livable</label>
+        <input type="number" id="lowerSquareFootageLivable" name="lowerSquareFootageLivable" readonly></p>
+
+    <p><label for="lowerWallLength">Lower Wall Length</label>
+        <input type="number" id="lowerWallLength" name="lowerWallLength" readonly></p>
+
+    <p><label for="upperSquareFootage">Upper Square Footage</label>
+        <input type="number" id="upperSquareFootage" name="upperSquareFootage" readonly></p>
+
+    <p><label for="upperSquareFootageLivable">Upper Square Footage Livable</label>
+        <input type="number" id="upperSquareFootageLivable" name="upperSquareFootageLivable" readonly></p>
+
+    <p><label for="upperWallLength">Upper Wall Length</label>
+        <input type="number" id="upperWallLength" name="upperWallLength" readonly></p>
+
+    <p><label for="buildingWidth">Building Width</label>
+        <input type="number" id="buildingWidth" name="buildingWidth" readonly></p>
+
+    <p><label for="buildingInteriorHeight">Building Interior Height</label>
+        <input type="number" id="buildingInteriorHeight" name="buildingInteriorHeight" readonly></p>
+
+    <p><label for="buildingExteriorHeight">Building Exterior Height</label>
+        <input type="number" id="buildingExteriorHeight" name="buildingExteriorHeight" readonly></p>
+
+    <p><label for="innerWallLength">Inner Wall Length</label>
+        <input type="number" id="innerWallLength" name="innerWallLength" readonly></p>
+
+    <p><label for="floorToWallAngle">Floor To Wall Angle</label>
+        <input type="number" id="floorToWallAngle" name="floorToWallAngle" readonly></p>
+
+    <p><label for="lowerCeilingWidth">Lower Ceiling Width</label>
+        <input type="number" id="lowerCeilingWidth" name="lowerCeilingWidth" readonly></p>
+</form>
+<canvas id="canvas" width="200" height="100">Your browser does not support this visualization.</canvas>
+</body>
+<script type="module" src="../scripts/aframecalculator.js"></script>
+</html>
